@@ -1,0 +1,314 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html, #root{
+    width: 100%;
+    height: 100%;
+}
+a{
+    text-decoration: none;
+}
+#root{
+    display: flex;
+    background-color: rgb(32, 32, 32);
+    flex-direction: column;
+    font-family: Roboto;
+    position: relative;
+}
+.root__header{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color:  #0f0f0f;
+    align-items: center;
+    justify-content: space-between;
+}
+.ytprofile{
+    margin-right: 20px;
+    cursor: pointer;
+}
+.hamburger{
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.dropdown{
+    width: 0px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #0f0f0f;
+    overflow: hidden;
+    overflow-y: auto;
+    transition: width 0.3s ease-in;
+}
+.box{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    border-bottom: 1px solid rgb(75, 75, 75);
+}
+.box__item{
+    width: 204px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    cursor: pointer;
+}
+.box__item img{
+    width: 20px;
+    height: 20px;
+    margin-right: 24px;
+}
+.box__item:hover{
+    background-color: rgb(97, 97, 97);
+    border-radius: 4px;
+}
+.showMenu{
+    width: 240px;
+}
+.dropdown2{
+    width: 300px;
+    max-height: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #282828;
+    right: 10px;
+    top: 35px;
+    border-radius: 8px;
+    overflow: hidden;
+    overflow-y: auto;
+    transition: max-height 0.5s ease;
+}
+.showProfile{
+    max-height: 1000px;
+}
+.dropdownBox1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 16px;
+    font-size: 14px;
+    border-bottom: 1px solid gray;
+}
+.dropdownBox1__pic{
+    background-color: #32681d;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+}
+.dropdownBox1__info{
+    width: auto;
+    height: 40px;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.dropdownBox1__info p{
+    color: #fff;
+    font-weight: bold;
+}
+.dropdown2__box{
+    width: 100%;
+    height: auto;
+    padding: 8px 0;
+    border-bottom: 1px solid gray;
+}
+.dropdown2__box__item{
+    width: auto;
+    height: 40px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+.dropdown2__box__item:hover{
+    background-color: rgb(97, 97, 97);
+}
+.dropdown2__box__item span{
+    margin-left: 10px;
+}
+.dropdown2__box__item img{
+    width: 16px;
+    height: 16px;
+}
+.right{
+    margin-left: auto;
+}
+.switchAccount{
+    width: 300px;
+    max-height: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #282828;
+    right: 10px;
+    top: 35px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+@keyframes switchAccount {
+    0% {
+        max-height: 0;
+    }
+    100% {
+        max-height: 300%;
+    }
+}
+.showBox{
+    animation: switchAccount 2.5s ease both;
+    animation-delay: 0.5s;
+}
+.switchAccount__head{
+    width: auto;
+    height: 50px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 16px;
+    border-bottom: 1px solid gray;
+}
+.switchAccount__head span{
+    margin-left: 10px;
+}
+.switchAccount__box{
+    width: 100%;
+    height: auto;
+    padding: 8px 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid gray;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.switchAccount__box__info{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    padding: 12px 0;
+    margin: 0 16px;
+    border-bottom: 1px solid gray;
+}
+.switchAccount__box__profile{
+    width: 100%;
+    height: 64px;
+    display: flex;
+    padding: 0 16px;
+    align-items: center;
+}
+.switchAccount__box__profile__pic{
+    background-color: #32681d;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    color: #fff;
+}
+.switchAccount__box__profile__info{
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 14px;
+    margin-left: 10px;
+}
+.switchAccount__box__item{
+    width: auto;
+    height: 40px;
+    padding: 0 16px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.switchAccount__box__item img{
+    margin-right: 10px;
+}
+.switchAccount__box__item:hover{
+    background-color: rgb(97, 97, 97);
+}
+.exit{
+    cursor: pointer;
+}
+.appearance{
+    width: 300px;
+    max-height: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #282828;
+    right: 10px;
+    top: 35px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.disable{
+    pointer-events: none;
+}
+.language{
+    width: 300px;
+    max-height: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #282828;
+    right: 10px;
+    top: 35px;
+    border-radius: 8px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.langBox{
+    overflow-y: auto;
+    overflow: hidden;
+}
+.restricted{
+    width: 300px;
+    max-height: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #282828;
+    right: 10px;
+    top: 35px;
+    border-radius: 8px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.restricted__box{
+    padding: 16px;
+    font-size: 13px;
+}
+.restricted__box span{
+    margin-bottom: 10px;
+}
+.restricted-input{
+    color: gray;
+    padding: 16px;
+    text-transform: uppercase;
+}
